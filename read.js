@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const data2 = JSON.parse(fs.readFileSync("./newbook.json", "utf-8"))
 
+// filter unique values from the exported json
 
 let result = data2.reduce((unique, o) => {
     if (!unique.some(obj => obj.descTitleTxt.trim() === o.descTitleTxt.trim())) {
